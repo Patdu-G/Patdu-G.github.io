@@ -1,4 +1,4 @@
-﻿/* ── DESIGN TOKENS ───────────────────────────────────────── */
+﻿
 :root {
   --bg-void:    #080c12;
   --bg-panel:   #0d1117;
@@ -17,7 +17,6 @@
   --font-mono:    'Share Tech Mono', monospace;
 }
 
-/* ── BASE ────────────────────────────────────────────────── */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 html { scroll-behavior: smooth; }
@@ -33,7 +32,6 @@ body {
 
 ::selection { background: var(--cyan); color: #000; }
 
-/* ── SCAN-LINE TEXTURE ───────────────────────────────────── */
 body::before {
   content: '';
   position: fixed;
@@ -49,11 +47,9 @@ body::before {
   z-index: 9999;
 }
 
-/* ── TYPOGRAPHY ──────────────────────────────────────────── */
 h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text-primary); }
 .mono { font-family: var(--font-mono); }
 
-/* ── NAVBAR ──────────────────────────────────────────────── */
 #navbar {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -95,7 +91,6 @@ h1, h2, h3, h4 { font-family: var(--font-display); color: var(--text-primary); }
 .nav-link-item:hover { color: var(--cyan) !important; }
 .nav-link-item:hover::after { width: 100%; }
 
-/* ── SECTION SCAFFOLDING ─────────────────────────────────── */
 section { padding: 100px 0; }
 .section-label {
   font-family: var(--font-mono);
@@ -123,7 +118,6 @@ section { padding: 100px 0; }
   margin: 20px 0 40px;
 }
 
-/* ── HERO ────────────────────────────────────────────────── */
 #hero {
   min-height: 100vh;
   display: flex;
@@ -223,8 +217,6 @@ section { padding: 100px 0; }
   margin-top: 2px;
 }
 
-/* ── ABOUT ───────────────────────────────────────────────── */
-
 #about .col-lg-4 {
   align-self: stretch;
   display: flex;
@@ -257,10 +249,8 @@ section { padding: 100px 0; }
   color: var(--text-primary);
 }
 
-/* ── SKILLS ──────────────────────────────────────────────── */
 #skills { background: var(--bg-void); }
 
-/* Filter tabs */
 .skill-filter-bar {
   display: flex;
   flex-wrap: wrap;
@@ -287,7 +277,6 @@ section { padding: 100px 0; }
   border-color: var(--cyan);
 }
 
-/* Skill cards grid */
 .skills-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
@@ -338,7 +327,6 @@ section { padding: 100px 0; }
   text-overflow: ellipsis;
 }
 
-/* Radial ring progress */
 .skill-ring-wrap {
   display: flex;
   align-items: center;
@@ -368,7 +356,6 @@ section { padding: 100px 0; }
   color: var(--text-muted);
 }
 
-/* Category badge */
 .skill-card-cat {
   position: absolute;
   top: 8px; right: 8px;
@@ -383,7 +370,6 @@ section { padding: 100px 0; }
 .cat-tool   { background: rgba(52,211,153,0.1); color: #34d399; }
 .cat-learning { background: rgba(251,191,36,0.1); color: #fbbf24; }
 
-/* Pulse on "learning" cards */
 @keyframes pulse-border {
   0%, 100% { border-color: var(--border); }
   50%       { border-color: rgba(251,191,36,0.5); }
@@ -392,7 +378,6 @@ section { padding: 100px 0; }
 .skill-card[data-cat="learning"]:hover { animation: none; border-color: rgba(251,191,36,0.6); }
 .skill-card[data-cat="learning"]::after { background: #fbbf24; }
 
-/* Stagger entrance */
 @keyframes card-in {
   from { opacity: 0; transform: translateY(16px) scale(0.96); }
   to   { opacity: 1; transform: translateY(0) scale(1); }
@@ -401,7 +386,6 @@ section { padding: 100px 0; }
   animation: card-in 0.4s ease forwards;
 }
 
-/* ── PROJECTS ────────────────────────────────────────────── */
 #projects { background: var(--bg-panel); }
 
 .project-card {
@@ -421,12 +405,10 @@ section { padding: 100px 0; }
   background: var(--bg-card-hover);
 }
 
-/* Featured card — persistent cyan top border */
 .col-lg-4:first-child .project-card {
   border-top: 2px solid rgba(0, 229, 255, 0.6);
 }
 
-/* Project preview image */
 .project-preview {
   position: relative;
   width: 100%;
@@ -456,7 +438,6 @@ section { padding: 100px 0; }
   pointer-events: none;
 }
 
-/* Featured badge */
 .featured-badge {
   position: absolute;
   top: 12px;
@@ -474,7 +455,6 @@ section { padding: 100px 0; }
   box-shadow: 0 0 10px rgba(0, 229, 255, 0.2);
 }
 
-/* Card body */
 .project-card-body {
   padding: 20px;
   display: flex;
@@ -530,7 +510,6 @@ section { padding: 100px 0; }
 }
 .project-link:hover { color: var(--cyan); }
 
-/* ── TESTIMONIALS ────────────────────────────────────────── */
 #testimonials { background: var(--bg-void); }
 .testimonial-card {
   background: var(--bg-card);
@@ -565,7 +544,6 @@ section { padding: 100px 0; }
   margin-top: 2px;
 }
 
-/* ── CONTACT ─────────────────────────────────────────────── */
 #contact { background: var(--bg-panel); }
 .contact-form-wrap {
   background: var(--bg-card);
@@ -631,14 +609,13 @@ section { padding: 100px 0; }
 .contact-info-item a.contact-link:hover .contact-icon {
   filter: brightness(1.2);
 }
-/* Per-platform accent colors on hover */
+
 .contact-info-item.fb-link a.contact-link:hover .contact-icon { color: #1877f2; }
 .contact-info-item.ig-link a.contact-link:hover .contact-icon { color: #e1306c; }
 .contact-info-item.li-link a.contact-link:hover .contact-icon { color: #0a66c2; }
 .contact-info-item.gh-link a.contact-link:hover .contact-icon { color: #ffffff; }
 .contact-info-item.em-link a.contact-link:hover .contact-icon { color: var(--cyan); }
 
-/* ── FOOTER ──────────────────────────────────────────────── */
 footer {
   background: var(--bg-void);
   border-top: 1px solid var(--border);
@@ -665,7 +642,6 @@ footer {
 .footer-links a:hover i.bi-facebook  { color: #1877f2; }
 .footer-links a:hover i.bi-instagram { color: #e1306c; }
 
-/* ── SCROLL REVEAL ───────────────────────────────────────── */
 .reveal {
   opacity: 0;
   transform: translateY(24px);
@@ -676,20 +652,17 @@ footer {
   transform: translateY(0);
 }
 
-/* ── CURSOR BLINK ────────────────────────────────────────── */
 .blink {
   animation: blink 1s step-end infinite;
   color: var(--cyan);
 }
 @keyframes blink { 50% { opacity: 0; } }
 
-/* ── MOBILE ──────────────────────────────────────────────── */
 @media (max-width: 768px) {
   section { padding: 70px 0; }
   .contact-form-wrap { padding: 24px; }
 }
 
-/* ── PHOTO CARD DECK ─────────────────────────────────────── */
 .card-deck-wrap {
   position: relative;
   width: 300px;
@@ -770,7 +743,6 @@ footer {
   transform: translateY(-4px);
 }
 
-/* ── HERO TERMINAL ───────────────────────────────────────── */
 .hero-terminal {
   font-family: var(--font-mono);
   background: #0d0d0d;
@@ -843,7 +815,7 @@ footer {
   0%, 100% { opacity: 1; }
   50%       { opacity: 0; }
 }
-/* ── ABOUT TERMINAL ──────────────────────────────────────── */
+
 .about-terminal {
     font-family: var(--font-mono);
     background: #0d0d0d;
@@ -853,7 +825,6 @@ footer {
     box-shadow: 0 0 40px rgba(0, 229, 255, 0.05);
 }
 
-/* ── TESTIMONIAL TERMINALS ───────────────────────────────── */
 .testi-terminal {
     font-family: var(--font-mono);
     background: #0d0d0d;
@@ -924,7 +895,6 @@ footer {
     animation: cur-blink 1s step-end infinite;
 }
 
-/* ── CONTACT FORM TERMINAL ───────────────────────────────── */
 .contact-form-wrap {
   background: #0d0d0d;
   border: 1px solid var(--border);
@@ -951,7 +921,6 @@ footer {
   color: var(--cyan);
 }
 
-/* ── PROJECT VIEW TOGGLE ─────────────────────────────────── */
 .project-view-toggle {
   display: flex;
   justify-content: flex-end;
@@ -1077,7 +1046,6 @@ footer {
   background: rgba(0,255,255,0.05);
 }
 
-/* ── STACK DETAIL PANEL ──────────────────────────────────── */
 .stack-detail-panel {
   position: relative;
   background: var(--bg-card);
@@ -1110,7 +1078,6 @@ footer {
   to   { opacity: 1; transform: translateY(0); }
 }
 
-/* ── STACK MODAL ─────────────────────────────────────────── */
 .stack-modal-overlay {
   position: fixed;
   inset: 0;
@@ -1154,7 +1121,7 @@ footer {
   flex-direction: column;
   justify-content: center;
 }
-/* MARQUEE */
+
 .marquee-wrapper {
   position: relative;
   width: 100%;

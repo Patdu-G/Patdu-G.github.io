@@ -6,20 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Patrio Gabriel Patdu — Developer</title>
 
-    <!-- Fonts -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
         href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Inter:wght@300;400;500;600&family=Syne:wght@700;800&display=swap"
         rel="stylesheet" />
 
-    <!-- Bootstrap 5 -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
 
-    <!-- Bootstrap Icons -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
 
-    <!-- Devicons -->
+
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 
     <link rel="stylesheet" href="style.css" />
@@ -27,7 +27,7 @@
 
 <body>
 
-    <!-- ── NAVBAR ─────────────────────────────────────────────── -->
+
     <nav id="navbar">
         <div class="container d-flex align-items-center justify-content-between">
             <a href="#hero" class="nav-brand">pgp.dev<span class="blink">_</span></a>
@@ -44,13 +44,13 @@
         </div>
     </nav>
 
-    <!-- ── HERO ───────────────────────────────────────────────── -->
+
 <section id="hero">
     <div class="hero-grid-bg"></div>
     <div class="container position-relative">
         <div class="row align-items-center">
 
-            <!-- LEFT COLUMN -->
+
             <div class="col-lg-7">
                 <div class="hero-tag">Student Developer — Philippines</div>
                 <h1 class="hero-name">
@@ -83,7 +83,7 @@
                 </div>
             </div>
 
-            <!-- RIGHT COLUMN — terminal -->
+
             <div class="col-lg-5 d-none d-lg-flex align-items-center justify-content-center reveal">
                 <div class="hero-terminal">
                     <div class="terminal-bar">
@@ -102,7 +102,7 @@
     </div>
 </section>
 
-    <!-- ── ABOUT ──────────────────────────────────────────────── -->
+
     <section id="about">
         <div class="container">
             <div class="row align-items-center g-5">
@@ -111,11 +111,11 @@
                         
                             <div class="card-deck-wrap" id="photo-card" onclick="cyclePhoto()">
 
-                                <!-- Stack shadow cards (decorative) -->
+
                                 <div class="deck-shadow deck-shadow-2"></div>
                                 <div class="deck-shadow deck-shadow-1"></div>
 
-                                <!-- The actual flipping card -->
+
                                 <div class="flip-card" id="flip-card">
                                     <div class="flip-card-inner" id="flip-inner">
                                         <div class="flip-card-front">
@@ -127,7 +127,7 @@
                                     </div>
                                 </div>
 
-                                <!-- Click hint -->
+
                                 <div class="position-absolute bottom-0 end-0 m-2">
                                     <span class="badge bg-dark border border-secondary"
                                         style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em;">
@@ -135,7 +135,7 @@
                                     </span>
                                 </div>
 
-                                <!-- Photo counter -->
+
                                 <div class="position-absolute top-0 start-0 m-2">
                                     <span class="badge bg-dark border border-secondary" id="photo-counter"
                                         style="font-family: var(--font-mono); font-size: 0.6rem; letter-spacing: 0.08em;">
@@ -170,7 +170,7 @@
         </div>
     </section>
 
-    <!-- ── SKILLS ─────────────────────────────────────────────── -->
+
     <section id="skills">
         <div class="container">
             <div class="text-center mb-4 reveal">
@@ -179,7 +179,7 @@
                 <div class="divider mx-auto"></div>
             </div>
 
-            <!-- Filter Tabs -->
+
             <div class="skill-filter-bar reveal">
                 <button class="skill-filter-btn active" data-filter="all">All</button>
                 <button class="skill-filter-btn" data-filter="web">Web</button>
@@ -188,10 +188,10 @@
                 <button class="skill-filter-btn" data-filter="learning">Learning</button>
             </div>
 
-            <!-- Cards Grid -->
+
             <div class="skills-grid" id="skills-grid">
 
-                <!-- WEB -->
+
                 <div class="skill-card reveal" data-cat="web">
                     <span class="skill-card-cat cat-web">Web</span>
                     <i class="devicon-html5-plain colored skill-card-icon"></i>
@@ -244,7 +244,7 @@
                     </div>
                 </div>
 
-                <!-- LANG -->
+
                 <div class="skill-card reveal" data-cat="lang">
                     <span class="skill-card-cat cat-lang">Lang</span>
                     <i class="devicon-php-plain colored skill-card-icon"></i>
@@ -297,7 +297,7 @@
                     </div>
                 </div>
 
-                <!-- TOOLS -->
+
                 <div class="skill-card reveal" data-cat="tool">
                     <span class="skill-card-cat cat-tool">Tool</span>
                     <i class="devicon-vscode-plain colored skill-card-icon"></i>
@@ -350,7 +350,7 @@
                     </div>
                 </div>
 
-                <!-- LEARNING -->
+
                 <div class="skill-card reveal" data-cat="learning">
                     <span class="skill-card-cat cat-learning">Learning</span>
                     <i class="devicon-react-original colored skill-card-icon"></i>
@@ -390,11 +390,11 @@
                     </div>
                 </div>
 
-            </div><!-- /skills-grid -->
+            </div>
         </div>
     </section>
 
-  <!-- ── PROJECTS ───────────────────────────────────────────── -->
+
 <section id="projects">
     <div class="container">
         <div class="text-center mb-5 reveal">
@@ -403,7 +403,7 @@
             <div class="divider mx-auto"></div>
         </div>
 
-                <!-- View Toggle -->
+
         <div class="project-view-toggle reveal">
             <button class="view-btn active" id="btn-grid" onclick="setProjectView('grid')">
                 <i class="bi bi-arrow-left-right"></i> Marquee
@@ -413,20 +413,20 @@
             </button>
         </div>
 
-        <!-- Marquee View -->
+
         <div id="projects-grid-view">
             <div class="marquee-wrapper">
                 <div class="marquee-track" id="marquee-track">
-                    <!-- Cards injected by script.js -->
+
                 </div>
             </div>
         </div>
 
-        <!-- (original grid markup below preserved but hidden, in case you want it back) -->
+
         <div id="projects-grid-view-legacy" style="display:none;">
             <div class="row g-4">
                 <div class="row g-4">
-                    <!-- Project 01 -->
+
                     <div class="col-md-6 col-lg-4 reveal">
                         <div class="project-card">
                             <div class="project-preview">
@@ -451,7 +451,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 02 -->
+
                     <div class="col-md-6 col-lg-4 reveal">
                         <div class="project-card">
                             <div class="project-preview">
@@ -475,7 +475,7 @@
                         </div>
                     </div>
 
-                                        <!-- Project 03 -->
+
                     <div class="col-md-6 col-lg-4 reveal">
                         <div class="project-card">
                             <div class="project-preview">
@@ -497,7 +497,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 04 -->
+
                     <div class="col-md-6 col-lg-4 reveal">
                         <div class="project-card">
                             <div class="project-preview">
@@ -525,11 +525,11 @@
             </div>
         </div>
 
-        <!-- Stack View -->
+
         <div id="projects-stack-view" style="display:none;">
             <div class="stack-carousel" style="position:relative;">
 
-                <!-- Peek: Previous card -->
+
                 <div class="stack-peek stack-peek-prev">
                     <div class="stack-peek-card">
                         <div class="stack-card-img"><img src="" alt="" id="peek-prev-img" /></div>
@@ -543,7 +543,7 @@
 
                 <div class="stack-stage" id="stack-stage">
 
-                    <!-- Card 1 -->
+
                     <div class="stack-card" data-index="0" onclick="openStackDetail(0)">
                         <div class="stack-card-img"><img src="static/paglaot.jpg" alt="Pagloat" /></div>
                         <div class="stack-card-info">
@@ -558,7 +558,7 @@
                         </div>
                     </div>
 
-                    <!-- Card 2 -->
+
                     <div class="stack-card" data-index="1" onclick="openStackDetail(1)">
                         <div class="stack-card-img"><img src="static/petals.jpg" alt="Petals" /></div>
                         <div class="stack-card-info">
@@ -574,7 +574,7 @@
                         </div>
                     </div>
 
-                                        <!-- Card 3 -->
+
                     <div class="stack-card" data-index="2" onclick="openStackDetail(2)">
                         <div class="stack-card-img"><img src="static/warpics.jpg" alt="War on Drugs" /></div>
                         <div class="stack-card-info">
@@ -588,7 +588,7 @@
                         </div>
                     </div>
 
-                    <!-- Card 4 -->
+
                     <div class="stack-card" data-index="3" onclick="openStackDetail(3)">
                         <div class="stack-card-img"><img src="static/survive.png" alt="survAIval" /></div>
                         <div class="stack-card-info">
@@ -605,7 +605,7 @@
 
                 </div>
 
-                <!-- Peek: Next card -->
+
                 <div class="stack-peek stack-peek-next">
                     <div class="stack-peek-card">
                         <div class="stack-card-img"><img src="" alt="" id="peek-next-img" /></div>
@@ -621,7 +621,7 @@
                 <button class="stack-nav stack-next" onclick="stackNav(1)"><i class="bi bi-chevron-right"></i></button>
             </div>
 
-            <!-- Stack Detail Modal -->
+
             <div class="stack-modal-overlay" id="stack-modal-overlay" onclick="closeStackDetail()">
                 <div class="stack-modal" onclick="event.stopPropagation()">
                     <button class="stack-detail-close" onclick="closeStackDetail()">
@@ -648,7 +648,7 @@
     </div>
 </section>
 
-   <!-- ── TESTIMONIALS ───────────────────────────────────────── -->
+
 <section id="testimonials">
     <div class="container">
         <div class="text-center mb-5 reveal">
@@ -703,7 +703,7 @@
     </div>
 </section>
 
-  <!-- ── CONTACT ────────────────────────────────────────────── -->
+
 <section id="contact">
     <div class="container">
         <div class="row g-5 align-items-center">
@@ -805,14 +805,14 @@
                                 </button>
                             </div>
                         </div>
-                    </div><!-- /contact-form-body -->
-                </div><!-- /contact-form-wrap -->
+                    </div>
+                </div>
             </div>
 
         </div>
     </div>
 </section>
-    <!-- ── FOOTER ─────────────────────────────────────────────── -->
+
     <footer>
         <div class="container d-flex flex-wrap justify-content-between align-items-center">
             <span class="footer-copy">© 2025 Patrio Gabriel Patdu — Built with HTML, CSS, JS & Bootstrap</span>
@@ -830,7 +830,7 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
     <script src="script.js"></script>

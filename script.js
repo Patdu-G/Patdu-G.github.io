@@ -1,4 +1,4 @@
-
+﻿
     /* ── NAVBAR SCROLL ─────────────────────────────────────── */
     const navbar = document.getElementById('navbar');
     window.addEventListener('scroll', () => {
@@ -99,7 +99,7 @@ const photos = [
   'static/img.jpg',
   'static/img2.jpg',
   'static/img3.jpg',
-  // add more: 'static/img4.jpg',
+  
 ];
 
 let currentPhoto = 0;
@@ -116,23 +116,23 @@ function cyclePhoto() {
 
   const nextIndex = (currentPhoto + 1) % photos.length;
 
-  // Load next photo on the back face
+  
   back.src = photos[nextIndex];
 
-  // Flip
+  
   inner.classList.add('flipping');
 
   setTimeout(() => {
-    // After flip: swap front to the new photo, reset without animation
+    
     front.src = photos[nextIndex];
     inner.style.transition = 'none';
     inner.classList.remove('flipping');
 
-    // Pre-load the one after next on the back
+    
     const afterNext = (nextIndex + 1) % photos.length;
     back.src = photos[afterNext];
 
-    // Re-enable transition after reset
+    
     setTimeout(() => {
       inner.style.transition = '';
       isFlipping = false;
@@ -143,7 +143,7 @@ function cyclePhoto() {
   }, 620);
 }
 
-// ── HERO TERMINAL ──────────────────────────────────────────
+
 (function () {
   const body = document.getElementById('terminal-body');
   if (!body) return;
@@ -318,7 +318,7 @@ function buildAboutTerminal() {
             return;
         }
 
-        // output line — type each span
+        
         body.appendChild(row);
         let si = 0;
         function nextSpan() {
@@ -333,7 +333,7 @@ function buildAboutTerminal() {
     next();
 }
 
-// Trigger when section scrolls into view (reuse your existing reveal observer pattern)
+
 const aboutTerminalTarget = document.getElementById('about-terminal-body');
 if (aboutTerminalTarget) {
     const obs = new IntersectionObserver((entries) => {
@@ -342,7 +342,7 @@ if (aboutTerminalTarget) {
     obs.observe(aboutTerminalTarget);
 }
 
-// ── TESTIMONIAL TERMINALS ───────────────────────────────────
+
 (function () {
   const TESTIMONIALS = [
     {
@@ -416,7 +416,7 @@ if (aboutTerminalTarget) {
         const p = document.createElement('span');
         p.className = 'tt-muted'; p.textContent = '→ '; d.appendChild(p);
         addCursor(d); li++;
-        // wait 4 seconds at idle then call onDone to trigger reset
+        
         setTimeout(() => onDone(), 4000);
         return;
       }
@@ -455,14 +455,14 @@ if (aboutTerminalTarget) {
     const bodyEl = document.getElementById(TESTIMONIALS[idx].id);
 
     function run() {
-      // fade out
+      
       bodyEl.style.transition = 'opacity 0.4s ease';
       bodyEl.style.opacity = '0';
       setTimeout(() => {
         bodyEl.innerHTML = '';
         bodyEl.style.opacity = '1';
         runTerminal(bodyEl, buildSequence(TESTIMONIALS[idx]), () => {
-          // wait 4s at idle (handled inside runTerminal), then restart after 1s fade
+          
           setTimeout(run, 1000);
         });
       }, 400);
@@ -471,7 +471,7 @@ if (aboutTerminalTarget) {
     run();
   }
 
-  // Trigger each terminal when it scrolls into view, staggered
+  
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
       if (entry.isIntersecting) {
@@ -487,7 +487,7 @@ if (aboutTerminalTarget) {
 })();
 
 
-// ── PROJECT STACK VIEW ────────────────────────────────────
+
 const stackData = [
   {
     num: '01 / FEATURED',
@@ -525,12 +525,12 @@ const stackData = [
 
 let stackIndex = 0;
 
-// MARQUEE - builds project cards from stackData and duplicates them for infinite scroll
+
 function buildMarquee() {
   const track = document.getElementById('marquee-track');
   if (!track || track.dataset.built === '1') return;
 
-  const STAR = String.fromCharCode(9733); // ASCII-safe way to render the star character
+  const STAR = String.fromCharCode(9733); 
 
   const html = stackData.map((p, i) => {
     const featured = /FEATURED/i.test(p.num)
@@ -557,7 +557,7 @@ function buildMarquee() {
     );
   }).join('');
 
-  // Duplicate once so the -50% scroll loops seamlessly
+  
   track.innerHTML = html + html;
   track.dataset.built = '1';
 }
@@ -571,7 +571,7 @@ function setProjectView(view) {
   if (view === 'stack') renderStack();
 }
 
-// INIT - build the marquee on page load (default view is grid/marquee)
+
 document.addEventListener('DOMContentLoaded', buildMarquee);
 if (document.readyState !== 'loading') buildMarquee();
 
@@ -579,7 +579,7 @@ function renderStack() {
   const cards = document.querySelectorAll('.stack-card');
   const total = cards.length;
 
-  // Show only the active card
+  
   cards.forEach((card, i) => {
     const isActive = i === stackIndex;
     card.style.opacity = isActive ? '1' : '0';
@@ -587,7 +587,7 @@ function renderStack() {
     card.style.transform = 'translateY(0) scale(1)';
   });
 
-  // Populate peek panels
+  
   const prevIndex = (stackIndex - 1 + total) % total;
   const nextIndex = (stackIndex + 1) % total;
   const prev = stackData[prevIndex];
