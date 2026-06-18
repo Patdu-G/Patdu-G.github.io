@@ -7,10 +7,10 @@
 
     /* ── TYPED ROLE ────────────────────────────────────────── */
     const roles = [
-      'Aspiring Web Developer',
-      'Student Coder',
+      'Aspiring Cybersecurity Specialist',
+      'Student Developer',
       'Front-End Learner',
-      'PHP Builder',
+      'Iskolar ng Bayan',
     ];
     let ri = 0, ci = 0, deleting = false;
     const el = document.getElementById('typed-role');
@@ -264,12 +264,12 @@ const aboutLines = [
     { type: 'out',   parts: [{ cls: 't-green', text: 'Patrio Gabriel Patdu' }, { cls: 't-muted', text: '(Gab for short)' }] },
     { type: 'gap' },
     { type: 'cmd',   prompt: 'gab@dev:~$', cmd: 'cat bio.txt' },
-    { type: 'out',   parts: [{ cls: 't-white', text: 'Student developer from Batangas, Philippines.' }] },
-    { type: 'out',   parts: [{ cls: 't-white', text: 'Sharpening skills in web dev — turning school' }] },
-    { type: 'out',   parts: [{ cls: 't-white', text: 'lessons into things you can actually click on.' }] },
+    { type: 'out',   parts: [{ cls: 't-white', text: 'Student Developer with a passion for securing systems and building web applications.' }] },
+    { type: 'out',   parts: [{ cls: 't-white', text: 'Cybersecurity, Backend Development, Web Technologies, and Network Architecture' }] },
+    { type: 'out',   parts: [{ cls: 't-white', text: 'Understanding how to Build and how to Break.' }] },
     { type: 'gap' },
-    { type: 'out',   parts: [{ cls: 't-white', text: 'Loves building from scratch: structure, logic,' }] },
-    { type: 'out',   parts: [{ cls: 't-white', text: 'design, UX. Perpetual learner. Always curious.' }] },
+    { type: 'out',   parts: [{ cls: 't-white', text: 'Always learning, always building.' }] },
+    { type: 'out',   parts: [{ cls: 't-white', text: 'Cybersecurity-focused Developer .' }] },
     { type: 'gap' },
     { type: 'cmd',   prompt: 'gab@dev:~$', cmd: 'cat info.json' },
     { type: 'out',   parts: [{ cls: 't-muted', text: '{' }] },
@@ -347,19 +347,19 @@ if (aboutTerminalTarget) {
   const TESTIMONIALS = [
     {
       id: 'testi-body-0',
-      name: 'Prof. Sample Name',
-      role: 'IT Instructor — Sample University',
+      name: 'Prof',
+      role: 'IT Instructor',
       quote: 'Gab is one of the most dedicated students I\'ve worked with. He takes feedback seriously and always comes back with something better than expected.',
     },
     {
       id: 'testi-body-1',
-      name: 'Classmate / Teammate',
+      name: 'Classmate',
       role: 'Student Developer',
       quote: 'Super reliable teammate. Whenever we had a project, Gab made sure the code was clean and the design was on point. Great eye for detail.',
     },
     {
       id: 'testi-body-2',
-      name: 'Group Project Member',
+      name: 'Teammate',
       role: 'Classmate',
       quote: 'He built our group\'s website almost entirely on his own and made it look professional. Fast learner, good communicator, solid developer.',
     },
