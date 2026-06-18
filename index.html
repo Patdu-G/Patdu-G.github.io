@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -70,7 +70,7 @@
 
                 <div class="hero-stats row g-4 mt-2">
                     <div class="col-auto">
-                        <div class="stat-num">3+</div>
+                        <div class="stat-num">4+</div>
                         <div class="stat-label">Projects Built</div>
                     </div>
                     <div class="col-auto">
@@ -404,18 +404,27 @@
             <div class="divider mx-auto"></div>
         </div>
 
-        <!-- View Toggle -->
+                <!-- View Toggle -->
         <div class="project-view-toggle reveal">
             <button class="view-btn active" id="btn-grid" onclick="setProjectView('grid')">
-                <i class="bi bi-grid-3x3-gap"></i> Grid
+                <i class="bi bi-arrow-left-right"></i> Marquee
             </button>
             <button class="view-btn" id="btn-stack" onclick="setProjectView('stack')">
                 <i class="bi bi-layers"></i> Stack
             </button>
         </div>
 
-        <!-- Grid View -->
+        <!-- Marquee View -->
         <div id="projects-grid-view">
+            <div class="marquee-wrapper">
+                <div class="marquee-track" id="marquee-track">
+                    <!-- Cards injected by script.js -->
+                </div>
+            </div>
+        </div>
+
+        <!-- (original grid markup below preserved but hidden, in case you want it back) -->
+        <div id="projects-grid-view-legacy" style="display:none;">
             <div class="row g-4">
                 <div class="row g-4">
                     <!-- Project 01 -->
@@ -467,7 +476,7 @@
                         </div>
                     </div>
 
-                    <!-- Project 03 -->
+                                        <!-- Project 03 -->
                     <div class="col-md-6 col-lg-4 reveal">
                         <div class="project-card">
                             <div class="project-preview">
@@ -481,6 +490,31 @@
                                 <div class="project-tags">
                                     <span class="project-tag">Python</span>
                                     <span class="project-tag">pygame</span>
+                                </div>
+                                <a href="#" class="project-link">
+                                    <i class="bi bi-arrow-right"></i> View Project
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 04 -->
+                    <div class="col-md-6 col-lg-4 reveal">
+                        <div class="project-card">
+                            <div class="project-preview">
+                                <img src="static/survive.png" alt="survAIval preview" class="project-img" />
+                                <div class="project-img-overlay"></div>
+                                <span class="featured-badge">&#9733; FEATURED</span>
+                            </div>
+                            <div class="project-card-body">
+                                <div class="project-num">04 / FEATURED</div>
+                                <div class="project-title">survAIval</div>
+                                <p class="project-desc">An all-around barangay website where you can find announcements, report incidents, and use a general tool for your barangay community.</p>
+                                <div class="project-tags">
+                                    <span class="project-tag">Web App</span>
+                                    <span class="project-tag">Community</span>
+                                    <span class="project-tag">Announcements</span>
+                                    <span class="project-tag">Incident Reports</span>
                                 </div>
                                 <a href="#" class="project-link">
                                     <i class="bi bi-arrow-right"></i> View Project
@@ -541,7 +575,7 @@
                         </div>
                     </div>
 
-                    <!-- Card 3 -->
+                                        <!-- Card 3 -->
                     <div class="stack-card" data-index="2" onclick="openStackDetail(2)">
                         <div class="stack-card-img"><img src="static/warpics.jpg" alt="War on Drugs" /></div>
                         <div class="stack-card-info">
@@ -551,6 +585,21 @@
                             <div class="project-tags">
                                 <span class="project-tag">Python</span>
                                 <span class="project-tag">pygame</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="stack-card" data-index="3" onclick="openStackDetail(3)">
+                        <div class="stack-card-img"><img src="static/survive.png" alt="survAIval" /></div>
+                        <div class="stack-card-info">
+                            <div class="project-num">04 / FEATURED</div>
+                            <div class="project-title">survAIval</div>
+                            <p style="font-size:0.82rem;color:var(--text-secondary);margin:8px 0 10px;line-height:1.5;">An all-around barangay website for announcements, incident reporting, and general community tools.</p>
+                            <div class="project-tags">
+                                <span class="project-tag">Web App</span>
+                                <span class="project-tag">Community</span>
+                                <span class="project-tag">Announcements</span>
                             </div>
                         </div>
                     </div>

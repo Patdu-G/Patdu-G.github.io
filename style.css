@@ -1132,3 +1132,43 @@ footer {
   flex-direction: column;
   justify-content: center;
 }
+/* MARQUEE */
+.marquee-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 24px 0 32px;
+  -webkit-mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+          mask-image: linear-gradient(to right, transparent 0, #000 8%, #000 92%, transparent 100%);
+}
+.marquee-track {
+  display: flex;
+  align-items: stretch;
+  gap: 28px;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
+  will-change: transform;
+}
+.marquee-wrapper:hover .marquee-track {
+  animation-duration: 80s;
+}
+.marquee-track .project-card {
+  flex: 0 0 400px;
+  width: 400px;
+  height: 505px;
+  cursor: pointer;
+}
+.marquee-track .project-card-body {
+  flex: 1 1 auto;
+  min-height: 0;
+}
+.marquee-track .project-desc {
+  flex: 1 1 auto;
+}
+@keyframes marquee-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}

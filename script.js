@@ -154,7 +154,7 @@ function cyclePhoto() {
     { type: 'gap' },
 
     { type: 'cmd', text: 'ls projects/' },
-    { type: 'out', parts: [{ cls: 't-green', t: 'Pagloat/' }, { cls: 't-muted', t: '  ' }, { cls: 't-green', t: 'WarOnDrugs/' }, { cls: 't-muted', t: '  ' }, { cls: 't-green', t: 'Petals/' }] },
+    { type: 'out', parts: [{ cls: 't-green', t: 'Pagloat/' }, { cls: 't-muted', t: '  ' }, { cls: 't-green', t: 'WarOnDrugs/' }, { cls: 't-muted', t: '  ' }, { cls: 't-green', t: 'Petals/' }, { cls: 't-muted', t: '  ' }, { cls: 't-green', t: 'survAIval/' }] },
     { type: 'gap' },
 
     { type: 'cmd', text: 'cat Pagloat/readme.md' },
@@ -505,25 +505,75 @@ const stackData = [
     tags: ['HTML', 'CSS', 'JavaScript', 'PHP'],
     link: '#'
   },
-  {
+    {
     num: '03',
     title: 'War on Drugs',
     desc: 'A 2D shooter game built in Python as a political commentary piece. Explores serious social themes through the lens of interactive media.',
     img: 'static/warpics.jpg',
     tags: ['Python', 'pygame'],
     link: '#'
+  },
+  {
+    num: '04 / FEATURED',
+    title: 'survAIval',
+    desc: 'An all-around barangay website where you can find announcements, report incidents, and a general tool for your barangay community.',
+    img: 'static/survive.png',
+    tags: ['Web App', 'Community', 'Announcements', 'Incident Reports'],
+    link: '#'
   }
 ];
 
 let stackIndex = 0;
+
+// MARQUEE - builds project cards from stackData and duplicates them for infinite scroll
+function buildMarquee() {
+  const track = document.getElementById('marquee-track');
+  if (!track || track.dataset.built === '1') return;
+
+  const STAR = String.fromCharCode(9733); // ASCII-safe way to render the star character
+
+  const html = stackData.map((p, i) => {
+    const featured = /FEATURED/i.test(p.num)
+      ? '<span class="featured-badge">' + STAR + ' FEATURED</span>'
+      : '';
+    const tags = p.tags.map(t => '<span class="project-tag">' + t + '</span>').join('');
+    return (
+      '<div class="project-card" onclick="openStackDetail(' + i + ')">' +
+        '<div class="project-preview">' +
+          '<img src="' + p.img + '" alt="' + p.title + ' preview" class="project-img" />' +
+          '<div class="project-img-overlay"></div>' +
+          featured +
+        '</div>' +
+        '<div class="project-card-body">' +
+          '<div class="project-num">' + p.num + '</div>' +
+          '<div class="project-title">' + p.title + '</div>' +
+          '<p class="project-desc">' + p.desc + '</p>' +
+          '<div class="project-tags">' + tags + '</div>' +
+          '<a href="' + p.link + '" class="project-link">' +
+            '<i class="bi bi-arrow-right"></i> View Project' +
+          '</a>' +
+        '</div>' +
+      '</div>'
+    );
+  }).join('');
+
+  // Duplicate once so the -50% scroll loops seamlessly
+  track.innerHTML = html + html;
+  track.dataset.built = '1';
+}
 
 function setProjectView(view) {
   document.getElementById('projects-grid-view').style.display = view === 'grid' ? '' : 'none';
   document.getElementById('projects-stack-view').style.display = view === 'stack' ? '' : 'none';
   document.getElementById('btn-grid').classList.toggle('active', view === 'grid');
   document.getElementById('btn-stack').classList.toggle('active', view === 'stack');
+  if (view === 'grid') buildMarquee();
   if (view === 'stack') renderStack();
 }
+
+// INIT - build the marquee on page load (default view is grid/marquee)
+document.addEventListener('DOMContentLoaded', buildMarquee);
+if (document.readyState !== 'loading') buildMarquee();
 
 function renderStack() {
   const cards = document.querySelectorAll('.stack-card');
