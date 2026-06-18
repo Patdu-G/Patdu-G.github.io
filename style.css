@@ -1,4 +1,4 @@
-/* ── DESIGN TOKENS ───────────────────────────────────────── */
+﻿/* ── DESIGN TOKENS ───────────────────────────────────────── */
 :root {
   --bg-void:    #080c12;
   --bg-panel:   #0d1117;
@@ -619,6 +619,24 @@ section { padding: 100px 0; }
   color: var(--text-secondary);
   margin-top: 2px;
 }
+.contact-info-item a.contact-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: color 0.2s ease;
+}
+.contact-info-item a.contact-link:hover {
+  color: var(--cyan);
+}
+.contact-info-item a.contact-link:hover .contact-icon {
+  filter: brightness(1.2);
+}
+/* Per-platform accent colors on hover */
+.contact-info-item.fb-link a.contact-link:hover .contact-icon { color: #1877f2; }
+.contact-info-item.ig-link a.contact-link:hover .contact-icon { color: #e1306c; }
+.contact-info-item.li-link a.contact-link:hover .contact-icon { color: #0a66c2; }
+.contact-info-item.gh-link a.contact-link:hover .contact-icon { color: #ffffff; }
+.contact-info-item.em-link a.contact-link:hover .contact-icon { color: var(--cyan); }
 
 /* ── FOOTER ──────────────────────────────────────────────── */
 footer {
@@ -642,6 +660,10 @@ footer {
   transition: color 0.2s;
 }
 .footer-links a:hover { color: var(--cyan); }
+.footer-links a:hover i.bi-github    { color: #ffffff; }
+.footer-links a:hover i.bi-linkedin  { color: #0a66c2; }
+.footer-links a:hover i.bi-facebook  { color: #1877f2; }
+.footer-links a:hover i.bi-instagram { color: #e1306c; }
 
 /* ── SCROLL REVEAL ───────────────────────────────────────── */
 .reveal {
