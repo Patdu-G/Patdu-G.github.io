@@ -659,9 +659,29 @@ footer {
 @keyframes blink { 50% { opacity: 0; } }
 
 @media (max-width: 768px) {
-  section { padding: 70px 0; }
-  .contact-form-wrap { padding: 24px; }
-}
+    section { padding: 70px 0; }
+    .contact-form-wrap { padding: 24px; }
+    .hero-terminal {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+    .terminal-bar {
+      padding: 8px 10px;
+    }
+    .terminal-dots .dot {
+      width: 9px;
+      height: 9px;
+    }
+    .terminal-title {
+      font-size: 10px;
+    }
+    .terminal-body {
+      padding: 14px 14px 18px;
+      min-height: 320px;
+      font-size: 12px;
+      line-height: 1.55;
+    }
+  }
 
 .card-deck-wrap {
   position: relative;
