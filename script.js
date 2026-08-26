@@ -275,7 +275,7 @@ const aboutLines = [
     { type: 'out',   parts: [{ cls: 't-muted', text: '{' }] },
     { type: 'out',   parts: [{ cls: 't-muted', text: '  ' }, { cls: 't-cyan', text: '"location"' }, { cls: 't-muted', text: ':' }, { cls: 't-yellow', text: ' "San Fernando City, Pampanga, PH"' }, { cls: 't-muted', text: ',' }] },
     { type: 'out',   parts: [{ cls: 't-muted', text: '  ' }, { cls: 't-cyan', text: '"status"' },   { cls: 't-muted', text: ':' }, { cls: 't-green', text: ' "Available for Opportunities"' }, { cls: 't-muted', text: ',' }] },
-    { type: 'out',   parts: [{ cls: 't-muted', text: '  ' }, { cls: 't-cyan', text: '"focus"' },    { cls: 't-muted', text: ':' }, { cls: 't-yellow', text: ' "Web Development"' }, { cls: 't-muted', text: ',' }] },
+    { type: 'out',   parts: [{ cls: 't-muted', text: '  ' }, { cls: 't-cyan', text: '"focus"' },    { cls: 't-muted', text: ':' }, { cls: 't-yellow', text: ' "AI/ML Enthusiast"' }, { cls: 't-muted', text: ',' }] },
     { type: 'out',   parts: [{ cls: 't-muted', text: '  ' }, { cls: 't-cyan', text: '"stack"' },    { cls: 't-muted', text: ':' }, { cls: 't-yellow', text: ' ["HTML","CSS","JS","PHP"]' }] },
     { type: 'out',   parts: [{ cls: 't-muted', text: '}' }] },
     { type: 'gap' },
