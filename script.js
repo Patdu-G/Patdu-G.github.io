@@ -261,7 +261,7 @@ function cyclePhoto() {
 /* ── ABOUT TERMINAL ──────────────────────────────────────── */
 const aboutLines = [
     { type: 'cmd',   prompt: 'gab@dev:~$', cmd: 'whoami' },
-    { type: 'out',   parts: [{ cls: 't-green', text: 'Patrio Gabriel Patdu' }, { cls: 't-muted', text: '(Gab for short)' }] },
+    { type: 'out',   parts: [{ cls: 't-green', text: 'Patrio Gabriel Patdu' }, { cls: 't-muted', text: '(Gab)' }] },
     { type: 'gap' },
     { type: 'cmd',   prompt: 'gab@dev:~$', cmd: 'cat bio.txt' },
     { type: 'out',   parts: [{ cls: 't-white', text: 'Student Developer with a passion for securing systems and building web applications.' }] },
