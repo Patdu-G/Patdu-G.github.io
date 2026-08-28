@@ -269,7 +269,7 @@ const aboutLines = [
     { type: 'out',   parts: [{ cls: 't-white', text: 'Understanding how to Build and how to Break.' }] },
     { type: 'gap' },
     { type: 'out',   parts: [{ cls: 't-white', text: 'Always learning, always building.' }] },
-    { type: 'out',   parts: [{ cls: 't-white', text: 'Cybersecurity-focused Developer .' }] },
+    { type: 'out',   parts: [{ cls: 't-white', text: 'Student Developer .' }] },
     { type: 'gap' },
     { type: 'cmd',   prompt: 'gab@dev:~$', cmd: 'cat info.json' },
     { type: 'out',   parts: [{ cls: 't-muted', text: '{' }] },
