@@ -273,7 +273,7 @@ const aboutLines = [
     { type: 'gap' },
     { type: 'cmd',   prompt: 'gab@dev:~$', cmd: 'cat info.json' },
     { type: 'out',   parts: [{ cls: 't-muted', text: '{' }] },
-    { type: 'out',   parts: [{ cls: 't-muted', text: '  ' }, { cls: 't-cyan', text: '"location"' }, { cls: 't-muted', text: ':' }, { cls: 't-yellow', text: ' "Tanauan City, Batangas, Philippines"' }, { cls: 't-muted', text: ',' }] },
+    { type: 'out',   parts: [{ cls: 't-muted', text: '  ' }, { cls: 't-cyan', text: '"location"' }, { cls: 't-muted', text: ':' }, { cls: 't-yellow', text: ' "San Fernando, Pampanga, Philippines"' }, { cls: 't-muted', text: ',' }] },
     { type: 'out',   parts: [{ cls: 't-muted', text: '  ' }, { cls: 't-cyan', text: '"status"' },   { cls: 't-muted', text: ':' }, { cls: 't-green', text: ' "New Projects: Loading"' }, { cls: 't-muted', text: ',' }] },
     { type: 'out',   parts: [{ cls: 't-muted', text: '  ' }, { cls: 't-cyan', text: '"focus"' },    { cls: 't-muted', text: ':' }, { cls: 't-yellow', text: ' "AI/ML Enthusiast"' }, { cls: 't-muted', text: ',' }] },
     { type: 'out',   parts: [{ cls: 't-muted', text: '  ' }, { cls: 't-cyan', text: '"stack"' },    { cls: 't-muted', text: ':' }, { cls: 't-yellow', text: ' ["HTML","CSS","JS","PHP, Python, C++"]' }] },
