@@ -353,7 +353,7 @@ if (aboutTerminalTarget) {
     },
     {
       id: 'testi-body-1',
-      name: 'Classmate',
+      name: 'Groupmate',
       role: 'Student Developer',
       quote: 'Super reliable teammate. Whenever we had a project, Gab made sure the code was clean and the design was on point. Great eye for detail.',
     },
