@@ -361,7 +361,7 @@ if (aboutTerminalTarget) {
       id: 'testi-body-2',
       name: 'Teammate',
       role: 'Classmate',
-      quote: 'He built our group\'s website almost entirely on his own and made it look professional. Fast learner, good communicator, solid developer.',
+      quote: 'Fast learner, good communicator, solid developer.',
     },
   ];
 
