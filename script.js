@@ -349,7 +349,7 @@ if (aboutTerminalTarget) {
       id: 'testi-body-0',
       name: 'Prof',
       role: 'IT Instructor',
-      quote: 'Gab is one of the most dedicated students I\'ve worked with. He takes feedback seriously and always comes back with something better than expected.',
+      quote: 'He takes feedback seriously and always comes back with something better than expected.',
     },
     {
       id: 'testi-body-1',
