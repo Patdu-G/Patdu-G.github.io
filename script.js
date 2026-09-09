@@ -349,7 +349,7 @@ if (aboutTerminalTarget) {
       id: 'testi-body-0',
       name: 'Prof',
       role: 'IT Instructor',
-      quote: 'He takes feedback seriously and always comes back with something better than expected.',
+      quote: 'He takes feedback seriously and always comes back with something better.',
     },
     {
       id: 'testi-body-1',
