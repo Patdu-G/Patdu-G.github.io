@@ -355,7 +355,7 @@ if (aboutTerminalTarget) {
       id: 'testi-body-1',
       name: 'Groupmate',
       role: 'Student Developer',
-      quote: 'Super reliable teammate. Gab made sure the code was clean and the design was on point.',
+      quote: ' Gab made sure the code was clean and the design was on point.',
     },
     {
       id: 'testi-body-2',
