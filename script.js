@@ -359,7 +359,7 @@ if (aboutTerminalTarget) {
     },
     {
       id: 'testi-body-2',
-      name: 'Teammate',
+      name: 'Developer ',
       role: 'Classmate',
       quote: 'Fast learner, good communicator, solid developer.',
     },
@@ -379,7 +379,7 @@ if (aboutTerminalTarget) {
     ];
   }
 
-  function runTerminal(bodyEl, sequence, onDone) {
+  function runTermineal(bodyEl, sequence, onDone) {
     let li = 0, ci = 0, cursorEl = null, msgSpan = null;
 
     function removeCursor() {
